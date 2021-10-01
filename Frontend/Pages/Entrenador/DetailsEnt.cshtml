@@ -1,0 +1,51 @@
+﻿@page
+@model Frontend.Pages.DetailsEntModel
+@{
+}
+<h1>Details</h1>
+<h4>Entrenador</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">                   
+                   <input type="hidden" asp-for="Entrenador.Id" />
+                    <div class="form-group">
+                    <label asp-for="Entrenador.Nombres" class="control-label"> </label>
+                    <input asp-for="Entrenador.Nombres"  class="form-control" readonly/>   
+                    <label asp-for="Entrenador.Apellidos" class="control-label"> </label>
+                    <input asp-for="Entrenador.Apellidos" class="form-control" readonly />
+                    <label asp-for="Entrenador.Identificacion" class="control-label"> </label>
+                    <input asp-for="Entrenador.Identificacion" class="form-control" readonly />
+                    <label asp-for="Entrenador.Telefono" class="control-label"> </label>
+                    <input asp-for="Entrenador.Telefono" class="form-control" readonly />
+                    <label asp-for="Entrenador.Direccion" class="control-label"> </label>
+                    <input asp-for="Entrenador.Direccion" class="form-control" readonly />
+                    <label asp-for="Entrenador.Email" class="control-label"> </label>
+                    <input asp-for="Entrenador.Email" class="form-control" readonly />
+                    <label asp-for="Entrenador.Genero" class="control-label"> </label>
+                    <input asp-for="Entrenador.Genero" class="form-control" readonly />
+                    <label asp-for="Entrenador.Rh" class="control-label"> </label>
+                    <input asp-for="Entrenador.Rh" class="form-control" readonly />
+                    <label asp-for="Entrenador.FechaNacimiento" class="control-label"> </label>
+                    <input asp-for="Entrenador.FechaNacimiento" class="form-control" readonly />
+                    <label asp-for="Entrenador.EquipoId" class="control-label"> </label>
+                    <input asp-for="Entrenador.EquipoId" class="form-control" readonly /> 
+                   </div>                   
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="EntIndex"> Back to List</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+

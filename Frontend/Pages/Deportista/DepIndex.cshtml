@@ -1,0 +1,32 @@
+﻿@page
+@model Frontend.Pages.DepIndexModel
+@{
+    ViewData["Title"]="DepIndex";
+}
+<h1>Listado de Deportistas</h1>
+<p>
+    <a asp-page="CreateDep">Crear Deportista</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dep in Model.Deportistas)
+        {
+            <tr>
+                <td>@dep.Id </td>
+                <td>@dep.Nombres </td>
+                <td>
+                    <a asp-page="./EditDep" asp-route-id="@dep.Id">Editar</a>
+                    <a asp-page="./DeleteDep" asp-route-id="@dep.Id">Eliminar</a>
+                    <a asp-page="./DetailsDep" asp-route-id="@dep.Id">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>

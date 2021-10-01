@@ -1,0 +1,32 @@
+﻿@page
+@model Frontend.Pages.PatroIndexModel
+@{
+    ViewData["Title"]="PatroIndex";
+}
+<h1>Listado de Patrocinadors</h1>
+<p>
+    <a asp-page="CreatePatro">Crear Patrocinador</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patro in Model.Patrocinadors)
+        {
+            <tr>
+                <td>@patro.Id </td>
+                <td>@patro.Nombres </td>
+                <td>
+                    <a asp-page="./EditPatro" asp-route-id="@patro.Id">Editar</a>
+                    <a asp-page="./DeletePatro" asp-route-id="@patro.Id">Eliminar</a>
+                    <a asp-page="./DetailsPatro" asp-route-id="@patro.Id">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>

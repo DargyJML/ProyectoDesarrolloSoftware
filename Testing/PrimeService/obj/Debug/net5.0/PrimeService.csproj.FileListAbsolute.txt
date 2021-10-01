@@ -1,0 +1,12 @@
+C:\Aplicacion\testing\PrimeService\bin\Debug\net5.0\PrimeService.deps.json
+C:\Aplicacion\testing\PrimeService\bin\Debug\net5.0\PrimeService.dll
+C:\Aplicacion\testing\PrimeService\bin\Debug\net5.0\ref\PrimeService.dll
+C:\Aplicacion\testing\PrimeService\bin\Debug\net5.0\PrimeService.pdb
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.csproj.AssemblyReference.cache
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.AssemblyInfoInputs.cache
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.AssemblyInfo.cs
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.csproj.CoreCompileInputs.cache
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.dll
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\ref\PrimeService.dll
+C:\Aplicacion\testing\PrimeService\obj\Debug\net5.0\PrimeService.pdb

@@ -1,0 +1,34 @@
+﻿@page
+@model Frontend.Pages.DeleteModel
+@{
+    ViewData["Title"]="Delete";
+}
+<h1>Delete</h1>
+<h4>Municipio</h4>
+<h2>@ViewData["Mensaje"] </h2>
+<div class="form-horizontal">        
+        <hr />        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">                   
+                   <input type="hidden" asp-for="Municipio.Id" />
+                   <div class="form-group">
+                       <label asp-for="Municipio.Nombre" class="control-label"> </label>
+                       <input asp-for="Municipio.Nombre" readonly class="form-control" readonly />                    
+                        
+                   </div>
+                   <div class="form-group">                       
+                       <input type="submit" value="Eliminar" class="btn btn-primary"/>                       
+                   </div>
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="MIndex"> Back to List</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

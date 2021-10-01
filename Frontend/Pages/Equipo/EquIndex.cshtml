@@ -1,0 +1,32 @@
+﻿@page
+@model Frontend.Pages.EquIndexModel
+@{
+    ViewData["Title"]="EquIndex";
+}
+<h1>Listado de Equipos</h1>
+<p>
+    <a asp-page="CreateEqu">Crear Equipo</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equ in Model.Equipos)
+        {
+            <tr>
+                <td>@equ.Id </td>
+                <td>@equ.Nombre </td>
+                <td>
+                    <a asp-page="./EditEqu" asp-route-id="@equ.Id">Editar</a>
+                    <a asp-page="./DeleteEqu" asp-route-id="@equ.Id">Eliminar</a>
+                    <a asp-page="./DetailsEqu" asp-route-id="@equ.Id">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>

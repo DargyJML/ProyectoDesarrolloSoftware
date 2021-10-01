@@ -1,0 +1,32 @@
+﻿@page
+@model Frontend.Pages.EntIndexModel
+@{
+    ViewData["Title"]="EntIndex";
+}
+<h1>Listado de Entrenadors</h1>
+<p>
+    <a asp-page="CreateEnt">Crear Entrenador</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ent in Model.Entrenadors)
+        {
+            <tr>
+                <td>@ent.Id </td>
+                <td>@ent.Nombres </td>
+                <td>
+                    <a asp-page="./EditEnt" asp-route-id="@ent.Id">Editar</a>
+                    <a asp-page="./DeleteEnt" asp-route-id="@ent.Id">Eliminar</a>
+                    <a asp-page="./DetailsEnt" asp-route-id="@ent.Id">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>

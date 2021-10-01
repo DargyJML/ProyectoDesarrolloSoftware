@@ -1,0 +1,41 @@
+﻿@page
+@model Frontend.Pages.DetailsModel
+@{
+}
+<h1>Details</h1>
+<h4>Municipio</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                   
+                   <input type="hidden" asp-for="Municipio.Id" />
+                    <div class="form-group">
+                       <label asp-for="Municipio.Id" class="control-label"> </label>
+                       <input asp-for="Municipio.Id"  class="form-control" readonly/>                       
+                      
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Municipio.Nombre" class="control-label"> </label>
+                       <input asp-for="Municipio.Nombre"  class="form-control" readonly/>                       
+                       
+                   </div>
+                   
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="MIndex"> Back to List</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

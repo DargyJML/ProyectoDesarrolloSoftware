@@ -1,0 +1,50 @@
+﻿@page
+@model Frontend.Pages.CreateEntModel
+@{
+    ViewData["Title"]="Create";
+}
+<h1>Crear Entrenador</h1>
+
+<div class="form-horizontal">
+    <hr />
+    <div class="row">
+        <div class=col-md-4>
+            <form method="post">
+                <div>  </div>
+                <div class="form-group">
+                    <label asp-for="Entrenador.Nombres" class="control-label"> </label>
+                    <input asp-for="Entrenador.Nombres" class="form-control" />
+                    <label asp-for="Entrenador.Apellidos" class="control-label"> </label>
+                    <input asp-for="Entrenador.Apellidos" class="form-control" />
+                    <label asp-for="Entrenador.Identificacion" class="control-label"> </label>
+                    <input asp-for="Entrenador.Identificacion" class="form-control" />
+                    <label asp-for="Entrenador.Telefono" class="control-label"> </label>
+                    <input asp-for="Entrenador.Telefono" class="form-control" />
+                    <label asp-for="Entrenador.Direccion" class="control-label"> </label>
+                    <input asp-for="Entrenador.Direccion" class="form-control" />
+                    <label asp-for="Entrenador.Email" class="control-label"> </label>
+                    <input asp-for="Entrenador.Email" class="form-control" />
+                    <label asp-for="Entrenador.Genero" class="control-label"> </label>
+                    <input asp-for="Entrenador.Genero" class="form-control" />
+                    <label asp-for="Entrenador.Rh" class="control-label"> </label>
+                    <input asp-for="Entrenador.Rh" class="form-control" />
+                    <label asp-for="Entrenador.FechaNacimiento" class="control-label"> </label>
+                    <input asp-for="Entrenador.FechaNacimiento" class="form-control" />
+                    <label asp-for="Entrenador.EquipoId" class="control-label"> </label>
+                    <input asp-for="Entrenador.EquipoId" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Crear" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="EntIndex">Ir al Inicio</a>
+    </div>
+</div>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

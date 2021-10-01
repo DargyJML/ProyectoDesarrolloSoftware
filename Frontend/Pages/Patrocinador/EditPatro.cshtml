@@ -1,0 +1,52 @@
+﻿@page
+@model Frontend.Pages.EditPatroModel
+@{
+    ViewData["Title"]="Edit";
+}
+
+<h1>Edit </h1>
+<h4>Patrocinador</h4>
+<h3>@ViewData["Mensaje"]</h3>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                  
+                   <input type="hidden" asp-for="Patrocinador.Id" />
+                   <div class="form-group">
+                    <label asp-for="Patrocinador.Nombres" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Nombres" class="form-control" />
+                    <label asp-for="Patrocinador.Apellidos" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Apellidos" class="form-control" />
+                    <label asp-for="Patrocinador.Identificacion" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Identificacion" class="form-control" />
+                    <label asp-for="Patrocinador.TipoPersona" class="control-label"> </label>
+                    <input asp-for="Patrocinador.TipoPersona" class="form-control" />
+                    <label asp-for="Patrocinador.Telefono" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Telefono" class="form-control" />
+                    <label asp-for="Patrocinador.Direccion" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Direccion" class="form-control" />
+                    <label asp-for="Patrocinador.Email" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Email" class="form-control" />
+                    <label asp-for="Patrocinador.Equipos" class="control-label"> </label>
+                    <input asp-for="Patrocinador.Equipos" class="form-control" />
+                   </div>
+                   <div class="form-group">                       
+                       <input type="submit" value="Edit" class="btn btn-primary"/>                       
+                   </div>
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="PatroIndex"> Back to List</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

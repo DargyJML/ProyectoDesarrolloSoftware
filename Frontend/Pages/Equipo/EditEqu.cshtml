@@ -1,0 +1,49 @@
+﻿@page
+@model Frontend.Pages.EditEquModel
+@{
+    ViewData["Title"]="EditEqu";
+}
+
+<h1>Edit </h1>
+<h4>Equipo</h4>
+<h3>@ViewData["Mensaje"]</h3>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                  
+                   <input type="hidden" asp-for="Equipo.Id" />
+                   <div class="form-group">
+                    <label asp-for="Equipo.Nombre" class="control-label"> </label>
+                    <input asp-for="Equipo.Nombre" class="form-control" />
+                    <label asp-for="Equipo.Disciplina" class="control-label"> </label>
+                    <input asp-for="Equipo.Disciplina" class="form-control" />
+                    <label asp-for="Equipo.Entrenador" class="control-label"> </label>
+                    <input asp-for="Equipo.Entrenador" class="form-control" />
+                    <label asp-for="Equipo.PatrocinadorId" class="control-label"> </label>
+                    <input asp-for="Equipo.PatrocinadorId" class="form-control" />
+                    <label asp-for="Equipo.TorneoEquipos" class="control-label"> </label>
+                    <input asp-for="Equipo.TorneoEquipos" class="form-control" />
+                    <label asp-for="Equipo.Deportistas" class="control-label"> </label>
+                    <input asp-for="Equipo.Deportistas" class="form-control" />                
+                       
+                   </div>
+                   <div class="form-group">                       
+                       <input type="submit" value="Edit" class="btn btn-primary"/>                       
+                   </div>
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="EquIndex"> Back to List</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
